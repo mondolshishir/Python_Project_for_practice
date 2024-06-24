@@ -12,7 +12,6 @@ else:
     print("Please type a number next time")
     quit()
 
-
 random_number = random.randint(0, top_range_number)
 
 guess_time = 0
@@ -24,16 +23,15 @@ while True:
     else:
         print("Please type e number next time. ")
         continue
+
     print("The random Number is : " + str(random_number))
+
     if user_guess == random_number:
         print("Ohh my God! Guess number and random is match!!!! ")
         break
+    elif user_guess > random_number:
+        print("Please remember your input random range is : " + str(top_range_number))
     else:
-        if user_guess > random_number:
-            print("Please remember your input random range is : " + str(top_range_number))
-        else:
-            print("Ops!! not match. Try next time.")
+        print("Ops!! not match. Try next time.")
 
-print ("You got matches your guess number with random number after trying "+ str(guess_time) + " times. ")
-
-
+print("You got matches your guess number with random number after trying " + str(guess_time) + " times. ")
